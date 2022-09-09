@@ -1,0 +1,80 @@
+
+h1 {
+  font-family: "Rock Salt", cursive;
+  font-size: 100px;
+  color: orange;
+  padding: 20px;
+}
+
+ h4 {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+
+ul, ol {
+  margin-top: 0;
+}
+
+.softened {
+  font-weight: bold;
+  display: inline;
+}
+
+.emphasis {
+  font-style: italic;
+  display: inline;
+}
+
+li {
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+}
+
+.copyright {
+  font-family: Arial;
+  font-size: 9px;
+  font-style: italic;
+}
+
+#footer {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: #000;
+  padding: 10px;
+}
+
+
+#heroimage {
+  position: relative;
+  background-image: url(https://images.unsplash.com/photo-1523634700860-90d0ef74f137?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80);
+  width: 100%;
+  height: 75vh;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* make the 3 recipe columns display using a flexbox method */
+#recipeColumns {
+  padding: 2vh;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6vh;
+}
+
+#recipeColumns div#ingredients {flex-basis: 28%; }
+#recipeColumns div#equipment {flex-basis: 20%; }
+#recipeColumns div#directions {flex-basis: 50%; }
+
+/*for portrait layout*/
+
+@media screen and (orientation: portrait) and (max-width: 575px) {
+  #heroimage {
+    height: 98vh;
+  }
+}
+
+ul, ol {
+  display: block;
+}
