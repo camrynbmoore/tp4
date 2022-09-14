@@ -1,4 +1,4 @@
-
+/* start baseline CSS */
 h1 {
   font-family: "Rock Salt", cursive;
   font-size: 100px;
@@ -6,13 +6,14 @@ h1 {
   padding: 20px;
 }
 
- h4 {
+h4 {
   font-family: "Lato", sans-serif;
   margin-bottom: 0;
   font-size: 30px;
 }
 
-ul, ol {
+ul,
+ol {
   margin-top: 0;
 }
 
@@ -69,44 +70,100 @@ li {
   position: relative;
 }
 
-#recipeColumns div#ingredients {width: 33%; }
-#recipeColumns div#equipment {width: 33%; }
-#recipeColumns div#directions {width: 33%; }
+#recipeColumns div#ingredients {
+  width: 33%;
+}
 
-* {box-sizing: border-box;}
+#recipeColumns div#equipment {
+  width: 33%;
+}
 
-/*for portrait layout*/
+#recipeColumns div#directions {
+  width: 33%;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* end baseline CSS */
+
+/* for portrait layout */
 @media screen and (orientation: portrait) {
-  
   #heroimage {
     height: 50vh;
-  }  
-  
-  #recipeColumns {
-   
   }
-  
-  #heroimage h1 { 
-  font-size: 70px }
+  #heroimage h1 {
+    font-size: 70px
+  }
+  #recipeColumns { /* this is what we changed to make it work for portrait */
+    width: 100%;
+    height: auto;
+    display: block;
+  } 
+  #recipeColumns div {
+    float: none;
+    display: block;
+  }
+  #recipeColumns div#ingredients {
+    width: 100%;
+  }
+  #recipeColumns div#equipment {
+    width: 100%;
+  }
+  #recipeColumns div#directions {
+    width: 100%;
+  }
+  #recipeColumns li {
+    font-size: 15px;
+  }
+  #recipeColumns h4 {
+    font-size: 20px;
+  } /* end previous comment */
 }
+  /* end of portrait media query */
 
-
-@media screen and (orientation: portrait) and (max-width: 575px) {
+  /* start of @media query max-width */
+@media screen and (max-width: 575px) { 
   #heroimage {
     height: 50vh;
-  }  
-  
-  #recipeColumns {
-   
   }
-  
-  #heroimage h1 { 
-  font-size: 70px }
+  #heroimage h1 {
+    font-size: 70px
+  }
+   #heroimage h1 {
+    font-size: 70px
+  }
+  #recipeColumns { /* this is what we changed to make it work for portrait */
+    width: 100%;
+    height: auto;
+    display: block;
+  } 
+  #recipeColumns div {
+    float: none;
+    display: block;
+  }
+  #recipeColumns div#ingredients {
+    width: 100%;
+  }
+  #recipeColumns div#equipment {
+    width: 100%;
+  }
+  #recipeColumns div#directions {
+    width: 100%;
+  }
+  #recipeColumns li {
+    font-size: 15px;
+  }
+  #recipeColumns h4 {
+    font-size: 20px;
+  }
+  #recipeColumn h4 {
+    font-size: 20px;
+  }
 }
-  
-}
+    /* end of @media query max-width */
 
-
-ul, ol {
+ul,
+ol {
   display: block;
 }
